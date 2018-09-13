@@ -1,0 +1,179 @@
+Query OK, 6 rows affected (0.01 sec)               
+Records: 6  Duplicates: 0  Warnings: 0
+
++------------+--------+-------+
+| name       | size   | state |
++------------+--------+-------+
+| Atlanta    | medium | NULL  |
+| Austin     | medium | NULL  |
+| Berkeley   | large  | NULL  |
+| Pasadena   | large  | NULL  |
+| Pittsburgh | large  | NULL  |
+| Princeton  | small  | NULL  |
++------------+--------+-------+
+6 rows in set (0.00 sec)
+
+Query OK, 2 rows affected (0.00 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
++------------+--------+-------+
+| name       | size   | state |
++------------+--------+-------+
+| Atlanta    | medium | GA    |
+| Austin     | medium | TX    |
+| Berkeley   | large  | CA    |
+| Pasadena   | large  | CA    |
+| Pittsburgh | large  | PA    |
+| Princeton  | small  | NJ    |
++------------+--------+-------+
+6 rows in set (0.00 sec)
+
++------------+---------------------------------------------+------+------+-------+------+---------+------------+
+| schoolCode | name                                        | GPA  | GRE  | TOEFL | Rec  | tuition | deadline   |
++------------+---------------------------------------------+------+------+-------+------+---------+------------+
+|       2074 | computer science                            |    0 |  322 |     0 |    3 |   47300 | 2018-11-11 |
+|       2672 | computer science                            |  3.5 |  328 |     0 |    3 |   49450 | 2018-12-15 |
+|       4034 | computing and mathematical sciences         |  3.5 |  325 |     0 |    3 |   48111 | 2018-12-15 |
+|       4833 | electrical engineering and computer science |  3.3 |  323 |    90 |    3 |   29272 | 2018-12-17 |
+|       5248 | computational science and engineering       |  3.2 |  324 |    90 |    3 |   13200 | 2019-02-01 |
+|       6882 | computer science                            | 3.86 |  325 |    79 |    3 |   11683 | 2018-12-15 |
++------------+---------------------------------------------+------+------+-------+------+---------+------------+
+6 rows in set (0.00 sec)
+
+Query OK, 5 rows affected (0.00 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
++------------+---------------------------------------------+--------------------+------+-------+------+---------+------------+
+| schoolCode | name                                        | GPA                | GRE  | TOEFL | Rec  | tuition | deadline   |
++------------+---------------------------------------------+--------------------+------+-------+------+---------+------------+
+|       2074 | computer science                            |                0.2 |  322 |     0 |    3 |   47300 | 2018-11-11 |
+|       2672 | computer science                            |                3.7 |  328 |     0 |    3 |   49450 | 2018-12-15 |
+|       4034 | computing and mathematical sciences         |                3.7 |  325 |     0 |    3 |   48111 | 2018-12-15 |
+|       4833 | electrical engineering and computer science |                3.5 |  323 |    90 |    3 |   29272 | 2018-12-17 |
+|       5248 | computational science and engineering       | 3.4000000000000004 |  324 |    90 |    3 |   13200 | 2019-02-01 |
+|       6882 | computer science                            |               3.86 |  325 |    79 |    3 |   11683 | 2018-12-15 |
++------------+---------------------------------------------+--------------------+------+-------+------+---------+------------+
+6 rows in set (0.00 sec)
+
++----------------------+-----------------------------+-----------------------------+
+| name                 | email                       | research                    |
++----------------------+-----------------------------+-----------------------------+
+| Ashok Goel           | goel@cc.gatech.edu          | Artificial Intelligence     |
+| Dana Ballard         | dana@cs.utexas.edu          | Artificial Intelligence     |
+| David Anderson       | dga@cs.cmu.edu              | computer systems            |
+| David August         | august@cs.princeton.edu     | Programming Languages       |
+| Kristen Grauman      | grauman@cs.utexas.edu       | Artificial Intelligence     |
+| Mark Borodovsky      | borodovsky@gatech.edu       | Machine Learning            |
+| Mark Braverman       | mbraverman@cs.princeton.edu | Machine Learning            |
+| Michael Lustig       | mlustig@eecs.berkeley.edu   | Database Management Systems |
+| Ravindra N. Bhatt    | jegonzal@eecs.berkeley.edu  | Database Management Systems |
+| Richard M. Murray    | murray@cds.caltech.edu      | control                     |
+| Stephen Brookes      | brookes@cs.cmu,edu          | Theory                      |
+| Yaser S. Abu-Mostafa | yaser@caltech.edu           | machine learning            |
++----------------------+-----------------------------+-----------------------------+
+12 rows in set (0.00 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
++----------------------+-----------------------------+-----------------------------+
+| name                 | email                       | research                    |
++----------------------+-----------------------------+-----------------------------+
+| Ashok Goel           | goel@cc.gatech.edu          | Artificial Intelligence     |
+| Dana Ballard         | dana@cs.utexas.edu          | Artificial Intelligence     |
+| David Anderson       | dga@cs.cmu.edu              | computer systems            |
+| David August         | august@cs.princeton.edu     | Programming Languages       |
+| Kristen Grauman      | grauman@cs.utexas.edu       | Artificial Intelligence     |
+| Mark Borodovsky      | borodovsky@gatech.edu       | Machine Learning            |
+| Mark Braverman       | mbraverman@cs.princeton.edu | Machine Learning            |
+| Michael Lustig       | mlustig@eecs.berkeley.edu   | Database Management Systems |
+| Ravindra N. Bhatt    | jegonzal@eecs.berkeley.edu  | Database Management Systems |
+| Stephen Brookes      | brookes@cs.cmu,edu          | Theory                      |
+| Yaser S. Abu-Mostafa | yaser@caltech.edu           | machine learning            |
++----------------------+-----------------------------+-----------------------------+
+11 rows in set (0.00 sec)
+
++------+------------------------------------+------+
+| code | name                               | rank |
++------+------------------------------------+------+
+| 2074 | Carnegie Mellon University         |   25 |
+| 2672 | Princeton University               |    1 |
+| 4034 | California Institute of Technology |   10 |
+| 4833 | University of California, Berkely  |   21 |
+| 5248 | Georgia Institute of Technology    |   34 |
+| 6882 | University of Texas at Austin      |   56 |
++------+------------------------------------+------+
+6 rows in set (0.00 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
++------+------------------------------------+------+
+| code | name                               | rank |
++------+------------------------------------+------+
+| 2672 | Princeton University               |    1 |
+| 4034 | California Institute of Technology |   10 |
+| 4833 | University of California, Berkely  |   21 |
+| 5248 | Georgia Institute of Technology    |   34 |
+| 6882 | University of Texas at Austin      |   56 |
++------+------------------------------------+------+
+5 rows in set (0.00 sec)
+
+Query OK, 5 rows affected (0.00 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
++-------------------+----------+
+| name              | location |
++-------------------+----------+
+| Apple             | TX       |
+| Argo AI           | PA       |
+| AT&T              | TX       |
+| Bloomberg L.P.    | NJ       |
+| Brianjolt         | CA       |
+| Duolingo          | PA       |
+| Google            | CA       |
+| Guidance Software | CA       |
+| HP                | TX       |
+| Infor             | GA       |
+| InformedDNA       | NJ       |
+| Intel             | CA       |
+| Meyer Sound       | CA       |
+| Microsoft         | GA       |
+| Netflix           | CA       |
+| Nvidia            | CA       |
+| Oasis Labs        | CA       |
++-------------------+----------+
+17 rows in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Empty set (0.00 sec)
+
+Query OK, 8 rows affected (0.00 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
++-------------------+
+| Company           |
++-------------------+
+| Brianjolt         |
+| Google            |
+| Guidance Software |
+| Intel             |
+| Meyer Sound       |
+| Netflix           |
+| Nvidia            |
+| Oasis Labs        |
++-------------------+
+8 rows in set (0.01 sec)
+
+MariaDB [wangsuqian123]> 

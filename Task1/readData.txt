@@ -1,0 +1,193 @@
+
+MariaDB [wangsuqian123]> \. /home/ugrads/w/wangsuqian123/cs_310/insertData.sql
+Query OK, 6 rows affected (0.01 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+Query OK, 6 rows affected (0.00 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+Query OK, 6 rows affected (0.00 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+Query OK, 12 rows affected (0.00 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+Query OK, 6 rows affected (0.00 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+Query OK, 12 rows affected (0.01 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+Query OK, 6 rows affected (0.00 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+Query OK, 6 rows affected (0.00 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+Query OK, 12 rows affected (0.00 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+Query OK, 6 rows affected (0.00 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+Query OK, 12 rows affected (0.00 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+MariaDB [wangsuqian123]> \. /home/ugrads/w/wangsuqian123/cs_310/selectData.sql
++------+------------------------------------+------+
+| code | name                               | rank |
++------+------------------------------------+------+
+| 2074 | Carnegie Mellon University         |   25 |
+| 2672 | Princeton University               |    1 |
+| 4034 | California Institute of Technology |   10 |
+| 4833 | University of California, Berkely  |   21 |
+| 5248 | Georgia Institute of Technology    |   34 |
+| 6882 | University of Texas at Austin      |   56 |
++------+------------------------------------+------+
+6 rows in set (0.00 sec)
+
++------------+---------------------------------------------+------+------+-------+------+---------+------------+
+| schoolCode | name                                        | GPA  | GRE  | TOEFL | Rec  | tuition | deadline   |
++------------+---------------------------------------------+------+------+-------+------+---------+------------+
+|       2074 | computer science                            |    0 |  322 |     0 |    3 |   47300 | 2018-11-11 |
+|       2672 | computer science                            |  3.5 |  328 |     0 |    3 |   49450 | 2018-12-15 |
+|       4034 | computing and mathematical sciences         |  3.5 |  325 |     0 |    3 |   48111 | 2018-12-15 |
+|       4833 | electrical engineering and computer science |  3.3 |  323 |    90 |    3 |   29272 | 2018-12-17 |
+|       5248 | computational science and engineering       |  3.2 |  324 |    90 |    3 |   13200 | 2019-02-01 |
+|       6882 | computer science                            | 3.86 |  325 |    79 |    3 |   11683 | 2018-12-15 |
++------------+---------------------------------------------+------+------+-------+------+---------+------------+
+6 rows in set (0.00 sec)
+
++------------+------+------+
+| schoolCode | abbr | rank |
++------------+------+------+
+|       2074 | CSD  |    3 |
+|       2672 | CS   |    8 |
+|       4034 | CS   |   10 |
+|       4833 | EECS |    4 |
+|       5248 | CSE  |    9 |
+|       6882 | CS   |   13 |
++------------+------+------+
+6 rows in set (0.00 sec)
+
++----------------------+-----------------------------+-----------------------------+
+| name                 | email                       | research                    |
++----------------------+-----------------------------+-----------------------------+
+| Ashok Goel           | goel@cc.gatech.edu          | Artificial Intelligence     |
+| Dana Ballard         | dana@cs.utexas.edu          | Artificial Intelligence     |
+| David Anderson       | dga@cs.cmu.edu              | computer systems            |
+| David August         | august@cs.princeton.edu     | Programming Languages       |
+| Kristen Grauman      | grauman@cs.utexas.edu       | Artificial Intelligence     |
+| Mark Borodovsky      | borodovsky@gatech.edu       | Machine Learning            |
+| Mark Braverman       | mbraverman@cs.princeton.edu | Machine Learning            |
+| Michael Lustig       | mlustig@eecs.berkeley.edu   | Database Management Systems |
+| Ravindra N. Bhatt    | jegonzal@eecs.berkeley.edu  | Database Management Systems |
+| Richard M. Murray    | murray@cds.caltech.edu      | control                     |
+| Stephen Brookes      | brookes@cs.cmu,edu          | Theory                      |
+| Yaser S. Abu-Mostafa | yaser@caltech.edu           | machine learning            |
++----------------------+-----------------------------+-----------------------------+
+12 rows in set (0.00 sec)
+
++------------+--------+
+| name       | size   |
++------------+--------+
+| Atlanta    | medium |
+| Austin     | medium |
+| Berkeley   | large  |
+| Pasadena   | large  |
+| Pittsburgh | large  |
+| Princeton  | small  |
++------------+--------+
+6 rows in set (0.00 sec)
+
++-------------------+----------+
+| name              | location |
++-------------------+----------+
+| Apple             | TX       |
+| Argo AI           | PA       |
+| Bloomberg L.P.    | NJ       |
+| Brianjolt         | CA       |
+| Duolingo          | PA       |
+| Guidance Software | CA       |
+| HP                | TX       |
+| Infor             | GA       |
+| InformedDNA       | NJ       |
+| Meyer Sound       | CA       |
+| Microsoft         | GA       |
+| Oasis Labs        | CA       |
++-------------------+----------+
+12 rows in set (0.00 sec)
+
++------+---------------------------------------------+
+| code | departmentName                              |
++------+---------------------------------------------+
+| 2074 | computer science                            |
+| 2672 | computer science                            |
+| 4034 | computing and mathematical sciences         |
+| 4833 | electrical engineering and computer science |
+| 5248 | computational science and engineering       |
+| 6882 | computer science                            |
++------+---------------------------------------------+
+6 rows in set (0.00 sec)
+
++---------------------------------------------+------+------+
+| departmentName                              | abbr | code |
++---------------------------------------------+------+------+
+| computational science and engineering       | CSE  | 5248 |
+| computer science                            | CS   | 2672 |
+| computer science                            | CS   | 6882 |
+| computer science                            | CSD  | 2074 |
+| computing and mathematical sciences         | CS   | 4034 |
+| electrical engineering and computer science | EECS | 4833 |
++---------------------------------------------+------+------+
+6 rows in set (0.00 sec)
+
++---------------------------------------------+----------------------+
+| departmentName                              | professorName        |
++---------------------------------------------+----------------------+
+| computational science and engineering       | Ashok Goel           |
+| computational science and engineering       | Mark Borodovsky      |
+| computer science                            | Dana Ballard         |
+| computer science                            | David Anderson       |
+| computer science                            | David August         |
+| computer science                            | Kristen Grauman      |
+| computer science                            | Mark Braverman       |
+| computer science                            | Stephen Brookes      |
+| computing and mathematical sciences         | Richard M. Murray    |
+| computing and mathematical sciences         | Yaser S. Abu-Mostafa |
+| electrical engineering and computer science | Michael Lustig       |
+| electrical engineering and computer science | Ravindra N. Bhatt    |
++---------------------------------------------+----------------------+
+12 rows in set (0.00 sec)
+
++------+----------+
+| code | cityName |
++------+----------+
+| 2074 | PA       |
+| 2672 | NJ       |
+| 4034 | CA       |
+| 4833 | CA       |
+| 5248 | GA       |
+| 6882 | TX       |
++------+----------+
+6 rows in set (0.00 sec)
+
++------------+-------------------+
+| cityName   | companyName       |
++------------+-------------------+
+| Atlanta    | Infor             |
+| Atlanta    | Microsoft         |
+| Austin     | Apple             |
+| Austin     | HP                |
+| Berkeley   | Meyer Sound       |
+| Berkeley   | Oasis Labs        |
+| Pasadena   | Brianjolt         |
+| Pasadena   | Guidance Software |
+| Pittsburgh | Argo AI           |
+| Pittsburgh | Duolingo          |
+| Princeton  | Bloomberg L.P.    |
+| Princeton  | InformedDNA       |
++------------+-------------------+
+12 rows in set (0.00 sec)
+
+MariaDB [wangsuqian123]> 

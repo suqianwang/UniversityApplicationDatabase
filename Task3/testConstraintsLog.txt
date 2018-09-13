@@ -1,0 +1,267 @@
+MariaDB [CSCE310]> \. /Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/reCreateTable.sql
+Query OK, 0 rows affected (0.031 sec)
+
+Query OK, 0 rows affected (0.016 sec)
+
+Query OK, 0 rows affected (0.015 sec)
+
+Query OK, 0 rows affected (0.020 sec)
+
+Query OK, 0 rows affected (0.013 sec)
+
+Query OK, 0 rows affected (0.021 sec)
+
+Query OK, 0 rows affected (0.021 sec)
+
+Query OK, 0 rows affected (0.009 sec)
+
+Query OK, 0 rows affected (0.013 sec)
+
+Query OK, 0 rows affected (0.017 sec)
+
+Query OK, 0 rows affected (0.011 sec)
+
+MariaDB [CSCE310]> \. /Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/insertDatawithError.sql
+Query OK, 9 rows affected (0.003 sec)
+Records: 9  Duplicates: 0  Warnings: 0
+
+ERROR 4025 (23000) at line 13 in file: '/Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/insertDatawithError.sql': CONSTRAINT `attribute_based_check_1` failed for `csce310`.`university`
+Query OK, 5 rows affected (0.003 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+ERROR 4025 (23000) at line 25 in file: '/Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/insertDatawithError.sql': CONSTRAINT `tuple_based_check_1` failed for `csce310`.`department`
+ERROR 4025 (23000) at line 28 in file: '/Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/insertDatawithError.sql': CONSTRAINT `tuple_based_check_1` failed for `csce310`.`department`
+Query OK, 6 rows affected (0.005 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+ERROR 4025 (23000) at line 41 in file: '/Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/insertDatawithError.sql': CONSTRAINT `attribute_based_check_1` failed for `csce310`.`major`
+Query OK, 12 rows affected (0.002 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+Query OK, 10 rows affected (0.002 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 14 rows affected (0.001 sec)
+Records: 14  Duplicates: 0  Warnings: 0
+
+Query OK, 6 rows affected (0.001 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+ERROR 1452 (23000) at line 99 in file: '/Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/insertDatawithError.sql': Cannot add or update a child row: a foreign key constraint fails (`csce310`.`owns`, CONSTRAINT `owns_ibfk_1` FOREIGN KEY (`code`) REFERENCES `University` (`code`) ON UPDATE CASCADE)
+Query OK, 6 rows affected (0.004 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+ERROR 1452 (23000) at line 111 in file: '/Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/insertDatawithError.sql': Cannot add or update a child row: a foreign key constraint fails (`csce310`.`offer`, CONSTRAINT `offer_ibfk_1` FOREIGN KEY (`departmentName`) REFERENCES `Department` (`name`) ON UPDATE CASCADE)
+Query OK, 12 rows affected (0.001 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+ERROR 1452 (23000) at line 129 in file: '/Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/insertDatawithError.sql': Cannot add or update a child row: a foreign key constraint fails (`csce310`.`works_for`, CONSTRAINT `works_for_ibfk_1` FOREIGN KEY (`departmentName`) REFERENCES `Department` (`name`) ON UPDATE CASCADE)
+Query OK, 6 rows affected (0.002 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+ERROR 4025 (23000) at line 141 in file: '/Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/insertDatawithError.sql': CONSTRAINT `tuple_based_check_2` failed for `csce310`.`located_at`
+ERROR 4025 (23000) at line 144 in file: '/Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/insertDatawithError.sql': CONSTRAINT `tuple_based_check_2` failed for `csce310`.`located_at`
+Query OK, 12 rows affected (0.001 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
+ERROR 1452 (23000) at line 163 in file: '/Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/insertDatawithError.sql': Cannot add or update a child row: a foreign key constraint fails (`csce310`.`has`, CONSTRAINT `has_ibfk_1` FOREIGN KEY (`cityName`) REFERENCES `City` (`name`) ON UPDATE CASCADE)
+MariaDB [CSCE310]> \. /Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/selectData.sql
++------+--------------------------------------------+------+
+| code | name                                       | rank |
++------+--------------------------------------------+------+
+| 1836 | University of Illinois at Urbana-Champaign |   25 |
+| 2074 | Carnegie Mellon University                 |   19 |
+| 2672 | Princeton University                       |    6 |
+| 4034 | California Institute of Technology         |    4 |
+| 4833 | University of California, Berkely          |   14 |
+| 5156 | Duke University                            |   13 |
+| 5248 | Georgia Institute of Technology            |   24 |
+| 6003 | Texas A&M University                       |   49 |
+| 6882 | University of Texas at Austin              |   22 |
++------+--------------------------------------------+------+
+9 rows in set (0.000 sec)
+
++------------+---------------------------------------------+------+------+-------+------+---------+------------+
+| schoolCode | name                                        | GPA  | GRE  | TOEFL | Rec  | tuition | deadline   |
++------------+---------------------------------------------+------+------+-------+------+---------+------------+
+|       2672 | computer science                            |  3.5 |  328 |     0 |    3 |   49450 | 2018-12-15 |
+|       4034 | computing and mathematical sciences         |  3.5 |  325 |     0 |    3 |   48111 | 2018-12-15 |
+|       4833 | electrical engineering and computer science |  3.3 |  323 |    90 |    3 |   29272 | 2018-12-17 |
+|       5248 | computational science and engineering       |  3.2 |  324 |    90 |    3 |   13200 | 2019-02-01 |
+|       6882 | computer science                            | 3.86 |  325 |    79 |    3 |   11683 | 2018-12-15 |
++------------+---------------------------------------------+------+------+-------+------+---------+------------+
+5 rows in set (0.000 sec)
+
++------------+------+------+
+| schoolCode | abbr | rank |
++------------+------+------+
+|       2074 | CSD  |    3 |
+|       2672 | CS   |    8 |
+|       4034 | CS   |   10 |
+|       4833 | EECS |    4 |
+|       5248 | CSE  |    9 |
+|       6882 | CS   |   13 |
++------------+------+------+
+6 rows in set (0.000 sec)
+
++----------------------+-----------------------------+-----------------------------+
+| name                 | email                       | research                    |
++----------------------+-----------------------------+-----------------------------+
+| Ashok Goel           | goel@cc.gatech.edu          | Artificial Intelligence     |
+| Dana Ballard         | dana@cs.utexas.edu          | Artificial Intelligence     |
+| David Anderson       | dga@cs.cmu.edu              | computer systems            |
+| David August         | august@cs.princeton.edu     | Programming Languages       |
+| Kristen Grauman      | grauman@cs.utexas.edu       | Artificial Intelligence     |
+| Mark Borodovsky      | borodovsky@gatech.edu       | Machine Learning            |
+| Mark Braverman       | mbraverman@cs.princeton.edu | Machine Learning            |
+| Michael Lustig       | mlustig@eecs.berkeley.edu   | Database Management Systems |
+| Ravindra N. Bhatt    | jegonzal@eecs.berkeley.edu  | Database Management Systems |
+| Richard M. Murray    | murray@cds.caltech.edu      | control                     |
+| Stephen Brookes      | brookes@cs.cmu,edu          | Theory                      |
+| Yaser S. Abu-Mostafa | yaser@caltech.edu           | machine learning            |
++----------------------+-----------------------------+-----------------------------+
+12 rows in set (0.000 sec)
+
++---------------+--------+
+| name          | size   |
++---------------+--------+
+| Atlanta       | medium |
+| Austin        | medium |
+| Berkeley      | large  |
+| Dallas        | large  |
+| Pasadena      | large  |
+| Pittsburgh    | large  |
+| Princeton     | small  |
+| San Diego     | large  |
+| San Francisco | large  |
+| Seattle       | large  |
++---------------+--------+
+10 rows in set (0.000 sec)
+
++-------------------+----------+
+| name              | location |
++-------------------+----------+
+| Apple             | TX       |
+| Argo AI           | PA       |
+| Bloomberg L.P.    | NJ       |
+| Brianjolt         | CA       |
+| Chase             | NY       |
+| Duolingo          | PA       |
+| Guidance Software | CA       |
+| HP                | TX       |
+| IBM               | NY       |
+| Infor             | GA       |
+| InformedDNA       | NJ       |
+| Meyer Sound       | CA       |
+| Microsoft         | GA       |
+| Oasis Labs        | CA       |
++-------------------+----------+
+14 rows in set (0.000 sec)
+
++------+---------------------------------------------+
+| code | departmentName                              |
++------+---------------------------------------------+
+| 2074 | computer science                            |
+| 2672 | computer science                            |
+| 4034 | computing and mathematical sciences         |
+| 4833 | electrical engineering and computer science |
+| 5248 | computational science and engineering       |
+| 6882 | computer science                            |
++------+---------------------------------------------+
+6 rows in set (0.000 sec)
+
++---------------------------------------------+------+------+
+| departmentName                              | abbr | code |
++---------------------------------------------+------+------+
+| computational science and engineering       | CSE  | 5248 |
+| computer science                            | CS   | 2672 |
+| computer science                            | CS   | 6882 |
+| computer science                            | CSD  | 2074 |
+| computing and mathematical sciences         | CS   | 4034 |
+| electrical engineering and computer science | EECS | 4833 |
++---------------------------------------------+------+------+
+6 rows in set (0.000 sec)
+
++---------------------------------------------+----------------------+
+| departmentName                              | professorName        |
++---------------------------------------------+----------------------+
+| computational science and engineering       | Ashok Goel           |
+| computational science and engineering       | Mark Borodovsky      |
+| computer science                            | Dana Ballard         |
+| computer science                            | David Anderson       |
+| computer science                            | David August         |
+| computer science                            | Kristen Grauman      |
+| computer science                            | Mark Braverman       |
+| computer science                            | Stephen Brookes      |
+| computing and mathematical sciences         | Richard M. Murray    |
+| computing and mathematical sciences         | Yaser S. Abu-Mostafa |
+| electrical engineering and computer science | Michael Lustig       |
+| electrical engineering and computer science | Ravindra N. Bhatt    |
++---------------------------------------------+----------------------+
+12 rows in set (0.000 sec)
+
++------+----------+
+| code | cityName |
++------+----------+
+| 2074 | PA       |
+| 2672 | NJ       |
+| 4034 | CA       |
+| 4833 | CA       |
+| 5248 | GA       |
+| 6882 | TX       |
++------+----------+
+6 rows in set (0.000 sec)
+
++------------+-------------------+
+| cityName   | companyName       |
++------------+-------------------+
+| Atlanta    | Infor             |
+| Atlanta    | Microsoft         |
+| Austin     | Apple             |
+| Austin     | HP                |
+| Berkeley   | Meyer Sound       |
+| Berkeley   | Oasis Labs        |
+| Pasadena   | Brianjolt         |
+| Pasadena   | Guidance Software |
+| Pittsburgh | Argo AI           |
+| Pittsburgh | Duolingo          |
+| Princeton  | Bloomberg L.P.    |
+| Princeton  | InformedDNA       |
++------------+-------------------+
+12 rows in set (0.000 sec)
+
+MariaDB [CSCE310]> \. /Users/SuqianWang/Downloads/CSCE 310/project/Suqian Wang/sub-part3/view.sql
+Query OK, 0 rows affected (0.018 sec)
+
+MariaDB [CSCE310]> SHOW TABLES;
++----------------------------------+
+| Tables_in_CSCE310                |
++----------------------------------+
+| City                             |
+| Company                          |
+| Department                       |
+| Has                              |
+| Located_at                       |
+| Major                            |
+| Offer                            |
+| Owns                             |
+| Professor                        |
+| University                       |
+| Works_for                        |
+| university_admission_requirement |
++----------------------------------+
+12 rows in set (0.009 sec)
+
+MariaDB [CSCE310]> SELECT * FROM university_admission_requirement;
++------------------------------------+-----------------+-------+------------+------+------+-------+------+------------+
+| University_name                    | University_rank | Major | Major_rank | GPA  | GRE  | TOEFL | rec  | deadline   |
++------------------------------------+-----------------+-------+------------+------+------+-------+------+------------+
+| University of California, Berkely  |              14 | EECS  |          4 |  3.3 |  323 |    90 |    3 | 2018-12-17 |
+| Princeton University               |               6 | CS    |          8 |  3.5 |  328 |     0 |    3 | 2018-12-15 |
+| Georgia Institute of Technology    |              24 | CSE   |          9 |  3.2 |  324 |    90 |    3 | 2019-02-01 |
+| California Institute of Technology |               4 | CS    |         10 |  3.5 |  325 |     0 |    3 | 2018-12-15 |
+| University of Texas at Austin      |              22 | CS    |         13 | 3.86 |  325 |    79 |    3 | 2018-12-15 |
++------------------------------------+-----------------+-------+------------+------+------+-------+------+------------+
+5 rows in set (0.016 sec)
+
+MariaDB [CSCE310]> 

@@ -1,0 +1,117 @@
+
+MariaDB [wangsuqian123]> \. /home/ugrads/w/wangsuqian123/cs_310/query.sql
++------------------------------------+------+
+| UNIVERSITY                         | RANK |
++------------------------------------+------+
+| Carnegie Mellon University         |    3 |
+| University of California, Berkely  |    4 |
+| Princeton University               |    8 |
+| Georgia Institute of Technology    |    9 |
+| California Institute of Technology |   10 |
+| University of Texas at Austin      |   13 |
++------------------------------------+------+
+6 rows in set (0.00 sec)
+
++------------------------------------+------+
+| UNIVERSITY                         | CITY |
++------------------------------------+------+
+| California Institute of Technology | CA   |
+| University of California, Berkely  | CA   |
++------------------------------------+------+
+2 rows in set (0.00 sec)
+
++-------------------+----------------------------+-----------------------------+
+| PROFESSOR         | EMAIL                      | RESEARCH_INTEREST           |
++-------------------+----------------------------+-----------------------------+
+| Ashok Goel        | goel@cc.gatech.edu         | Artificial Intelligence     |
+| Dana Ballard      | dana@cs.utexas.edu         | Artificial Intelligence     |
+| Kristen Grauman   | grauman@cs.utexas.edu      | Artificial Intelligence     |
+| Michael Lustig    | mlustig@eecs.berkeley.edu  | Database Management Systems |
+| Ravindra N. Bhatt | jegonzal@eecs.berkeley.edu | Database Management Systems |
++-------------------+----------------------------+-----------------------------+
+5 rows in set (0.00 sec)
+
++------+------------------------------------+-----------------+-------+------------+------+------+-------+------+------------+
+| code | University_name                    | University_rank | Major | Major_rank | GPA  | GRE  | TOEFL | rec  | deadline   |
++------+------------------------------------+-----------------+-------+------------+------+------+-------+------+------------+
+| 2074 | Carnegie Mellon University         |              25 | CSD   |          3 |    0 |  322 |     0 |    3 | 2018-11-11 |
+| 4833 | University of California, Berkely  |              21 | EECS  |          4 |  3.3 |  323 |    90 |    3 | 2018-12-17 |
+| 2672 | Princeton University               |               1 | CS    |          8 |  3.5 |  328 |     0 |    3 | 2018-12-15 |
+| 5248 | Georgia Institute of Technology    |              34 | CSE   |          9 |  3.2 |  324 |    90 |    3 | 2019-02-01 |
+| 4034 | California Institute of Technology |              10 | CS    |         10 |  3.5 |  325 |     0 |    3 | 2018-12-15 |
+| 6882 | University of Texas at Austin      |              56 | CS    |         13 | 3.86 |  325 |    79 |    3 | 2018-12-15 |
++------+------------------------------------+-----------------+-------+------------+------+------+-------+------+------------+
+6 rows in set (0.00 sec)
+
++------+------------------------------------+------+----------+-------------------+
+| code | University                         | rank | location | Company           |
++------+------------------------------------+------+----------+-------------------+
+| 2672 | Princeton University               |    1 | NJ       | InformedDNA       |
+| 2672 | Princeton University               |    1 | NJ       | Bloomberg L.P.    |
+| 4034 | California Institute of Technology |   10 | CA       | Meyer Sound       |
+| 4034 | California Institute of Technology |   10 | CA       | Guidance Software |
+| 4034 | California Institute of Technology |   10 | CA       | Brianjolt         |
+| 4034 | California Institute of Technology |   10 | CA       | Oasis Labs        |
+| 4833 | University of California, Berkely  |   21 | CA       | Meyer Sound       |
+| 4833 | University of California, Berkely  |   21 | CA       | Guidance Software |
+| 4833 | University of California, Berkely  |   21 | CA       | Brianjolt         |
+| 4833 | University of California, Berkely  |   21 | CA       | Oasis Labs        |
+| 2074 | Carnegie Mellon University         |   25 | PA       | Duolingo          |
+| 2074 | Carnegie Mellon University         |   25 | PA       | Argo AI           |
+| 5248 | Georgia Institute of Technology    |   34 | GA       | Microsoft         |
+| 5248 | Georgia Institute of Technology    |   34 | GA       | Infor             |
+| 6882 | University of Texas at Austin      |   56 | TX       | Apple             |
+| 6882 | University of Texas at Austin      |   56 | TX       | HP                |
++------+------------------------------------+------+----------+-------------------+
+16 rows in set (0.00 sec)
+
++------------+-------------------------------------+
+| schoolcode | name                                |
++------------+-------------------------------------+
+|       2074 | computer science                    |
+|       2672 | computer science                    |
+|       4034 | computing and mathematical sciences |
+|       6882 | computer science                    |
++------------+-------------------------------------+
+4 rows in set (0.00 sec)
+
++------------------------+-----------------------------------+---------------------------------------------+------------+
+| COUNT(University.code) | name                              | name                                        | deadline   |
++------------------------+-----------------------------------+---------------------------------------------+------------+
+|                      1 | Carnegie Mellon University        | computer science                            | 2018-11-11 |
+|                      3 | Princeton University              | computer science                            | 2018-12-15 |
+|                      1 | University of California, Berkely | electrical engineering and computer science | 2018-12-17 |
+|                      1 | Georgia Institute of Technology   | computational science and engineering       | 2019-02-01 |
++------------------------+-----------------------------------+---------------------------------------------+------------+
+4 rows in set (0.00 sec)
+
++------------+---------------------------------------------+------+------+-------+------+---------+------------+
+| schoolCode | name                                        | GPA  | GRE  | TOEFL | Rec  | tuition | deadline   |
++------------+---------------------------------------------+------+------+-------+------+---------+------------+
+|       2074 | computer science                            |    0 |  322 |     0 |    3 |   47300 | 2018-11-11 |
+|       4034 | computing and mathematical sciences         |  3.5 |  325 |     0 |    3 |   48111 | 2018-12-15 |
+|       4833 | electrical engineering and computer science |  3.3 |  323 |    90 |    3 |   29272 | 2018-12-17 |
+|       5248 | computational science and engineering       |  3.2 |  324 |    90 |    3 |   13200 | 2019-02-01 |
++------------+---------------------------------------------+------+------+-------+------+---------+------------+
+4 rows in set (0.00 sec)
+
++----------------------+
+| COUNT(DISTINCT name) |
++----------------------+
+|                    4 |
++----------------------+
+1 row in set (0.00 sec)
+
++------+---------------------------------------------+------------------+
+| code | departmentName                              | NumberOfferMajor |
++------+---------------------------------------------+------------------+
+| 2074 | computer science                            |                1 |
+| 2672 | computer science                            |                1 |
+| 4034 | computing and mathematical sciences         |                1 |
+| 4833 | electrical engineering and computer science |                1 |
+| 5248 | computational science and engineering       |                1 |
+| 6882 | computer science                            |                1 |
++------+---------------------------------------------+------------------+
+6 rows in set (0.00 sec)
+
+MariaDB [wangsuqian123]> 
