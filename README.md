@@ -1,7 +1,7 @@
-# UniversityApplicationDatabase
-### a database application which allows user to gain information of their dream graduate schools by performing SQL queries.
+# Graduate School Admission Guide
+### A database for student to select their desired school based on admission requirement by performing SQL queries
 
-1. Design the database.
+1. Designed a schema for the database to properly associate relations that would contain useful graduate school information.
 
 2. Create table and insert data using SQL. Display the database (task 1)
 
